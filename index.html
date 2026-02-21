@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invitación Especial</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #1a1a1a, #3a0f2b);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+    .card {
+        background: rgba(255,255,255,0.08);
+        padding: 40px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 40px rgba(255,0,100,0.3);
+        max-width: 400px;
+    }
+    h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+    button {
+        background: #ff2e63;
+        border: none;
+        padding: 12px 25px;
+        color: white;
+        font-size: 16px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    button:hover {
+        background: #ff4f81;
+        transform: scale(1.05);
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>Tengo una pregunta para ti ❤️</h1>
+    <p>
+        Mañana quiero que el mundo se detenga un momento.<br>
+        Solo tú y yo.<br><br>
+        ¿Aceptas salir conmigo a las 7:00 PM?
+    </p>
+    <button onclick="respuesta()">Aceptar Invitación</button>
+</div>
+
+<script>
+function respuesta() {
+    document.querySelector('.card').innerHTML = `
+        <h1>Sabía que dirías que sí 😌</h1>
+        <p>
+            Prepárate para una noche especial.<br>
+            Paso por ti mañana a las 7:00 PM.
+        </p>
+    `;
+}
+</script>
+
+</body>
+</html>
